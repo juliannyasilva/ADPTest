@@ -11,8 +11,8 @@ const userData = {
 
 const candidateData = {
     firstName: 'Julianny',
-    lastName: 'Test',
-    email: 'juliannytest@example.com'
+    lastName: 'Tests',
+    email: 'juliannytests@example.com'
 };
 
 test('login into OrangeHRM', async ({ page }) => {
@@ -53,7 +53,7 @@ test('Recruitment - Edit Candidate', async ({ page }) => {
   await recruitment.clickAddCandidate();
   await recruitment.selectCandidate(candidateData.firstName, candidateData.lastName);
   await recruitment.clickEditCandidate();
-  await recruitment.typeEmail('juju@example.com');
+  await recruitment.typeEmail('julianny@example.com');
   await recruitment.clickSave();
-  await expect(page.getByText('juju@example.com')).toBeVisible();
+  await expect(page.getByText('julianny@example.com')).toBeVisible();
 });
