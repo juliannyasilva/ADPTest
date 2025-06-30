@@ -55,5 +55,5 @@ test('Recruitment - Edit Candidate', async ({ page }) => {
   await recruitment.clickEditCandidate();
   await recruitment.typeEmail('juju@example.com');
   await recruitment.clickSave();
-  await expect(page.getByText('julianny@example.com')).toBeVisible();
+  await expect(page.getByText('juju@example.com')).toBeVisible();
 });
